@@ -4,10 +4,6 @@
     width: 30%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-gap: 1rem; */
-}
-header{
-    position: fixed;
 }
 h1{
     margin-bottom: .5rem;
@@ -20,4 +16,12 @@ h1{
     padding: .5rem;
     border: 1px solid #000;
     border-collapse: collapse;
+}
+@media (max-width: 460px) {
+
+  main {
+    height: calc(100vh - 5.5rem);
+    justify-content: flex-start;
+    margin-top: 2.5rem;
+  }
 }

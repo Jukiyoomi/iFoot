@@ -59,41 +59,44 @@ function pause() {
 }
 
 function startTimer() {
-    seconds--
-    if (seconds < 0) {
-        if (minutes <= 0) {
-            // pause()
-            // seconds = 0
-            text.innerText = 'Terminé !!'
-            clearInterval(cron)
-            scores.forEach(s => {
-                s.classList.add('inactive')
-            })
+    if (window.innerHeight < window.innerWidth) {
+        seconds--
+        if (seconds < 0) {
+            if (minutes <= 0) {
+                // pause()
+                // seconds = 0
+                text.innerText = 'Terminé !!'
+                clearInterval(cron)
+                scores.forEach(s => {
+                    s.classList.add('inactive')
+                })
 
-            setTimeout(() => {
-                if (scores[0].innerText < scores[1].innerText) {
-                    text.innerText = `Vainqueur: ${players[1]}`
-                }
-                if (scores[0].innerText > scores[1].innerText) {
-                    text.innerText = `Vainqueur: ${players[0]}`
-                }
-                if (scores[0].innerText == scores[1].innerText) {
-                    text.innerText = `Egalité parfaite`
-                }
-            }, 2000);
-            let match = `${players[0]} : ${scores[0].innerText} - ${scores[1].innerText} : ${players[1]}`
-            storeLocally(match)
+                setTimeout(() => {
+                    if (scores[0].innerText < scores[1].innerText) {
+                        text.innerText = `Vainqueur: ${players[1]}`
+                    }
+                    if (scores[0].innerText > scores[1].innerText) {
+                        text.innerText = `Vainqueur: ${players[0]}`
+                    }
+                    if (scores[0].innerText == scores[1].innerText) {
+                        text.innerText = `Egalité parfaite`
+                    }
+                }, 2000);
+                let match = `${players[0]} : ${scores[0].innerText} - ${scores[1].innerText} : ${players[1]}`
+                storeLocally(match)
 
-            setTimeout(() => {
-                window.location = '../pages/histo.html'
-            }, 6000);
-            return
-        } else {
-            seconds = 59
-            minutes--
+                setTimeout(() => {
+                    window.location = '../pages/histo.html'
+                }, 6000);
+                return
+            } else {
+                seconds = 59
+                minutes--
+            }
+            console.log(cron)
         }
-        console.log(cron)
     }
+    
     setTimeValue()
 }
 

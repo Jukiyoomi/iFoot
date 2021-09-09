@@ -6,6 +6,8 @@
 }
 .img-cont img {
     width: 100%;
+    pointer-events: none;
+    user-select: none;
 }
 main {
     flex-direction: row;
@@ -14,5 +16,36 @@ main {
 .info {
     width: 30%;
     display: flex;
+    font-size: 1.2rem;
+}
+.info span {
+    font-weight: bolder;
+    color: #026e99;
+}
+
+@media (max-width: 460px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: 5.5rem;
+    padding: 1rem 0;
+  }
+  ul {
+    width: 80vw;
+    /* background: green; */
+    justify-content: center;
+  }
+  .img-cont {
+      width: 80%;
+  }
+  main {
+      margin-top: 4rem;
+      flex-direction: column;
+      justify-content: flex-start;
+  }
+  .info {
+      width: 80%;
+      text-align: justify;
+  }
 }
 
