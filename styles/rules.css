@@ -8,3 +8,13 @@ h1 {
 p {
     margin-bottom: 2.5rem;
 }
+
+@media (max-width: 460px) {
+  main {
+    min-height: calc(100vh - 5.5rem);
+    justify-content: flex-start;
+    height: 145vh;
+  }
+  
+
+}

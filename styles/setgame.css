@@ -1,17 +1,17 @@
 @import url(./default.css);
 .names {
     display: none;
-    margin: 1rem 0;
-    font-size: 1.2rem;
+    margin: 1em 0;
+    font-size: 1.2em;
 }
 .names.visible {
     display: block;
 }
 .container * {
-    margin: .5rem;
+    margin: .5em;
 }
 .players {
-    margin: .6rem;
+    margin: .6em;
 }
 .main-container {
     display: flex;
@@ -22,6 +22,18 @@
     border-radius: 10px;
     height: 60%;
     width: 40%;
+}
+
+@media (max-width: 460px) {
+    main {
+        justify-content: flex-start;
+    }
+    .container * {
+        margin: 0;
+    }
+    .main-container * {
+        margin: .8em;
+    }
 }
 
 

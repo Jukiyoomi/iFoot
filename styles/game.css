@@ -10,8 +10,7 @@ main {
     width: 50vw;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 1rem;
-    
+    grid-gap: 1rem;  
 }
 .container-grid * {
     display: flex;
@@ -60,7 +59,7 @@ main {
     font-size: 3em;
     font-weight: bold;
 }
-.courage {
+/* .courage {
     position: absolute;
     font-size: 5rem;
     width: 50%;
@@ -70,17 +69,37 @@ main {
     user-select: none;
     pointer-events: none;
     animation: bottom-to-top 3s forwards;
+} */
+
+@media (max-width: 850px) and (orientation: landscape) {
+    header {
+    flex-direction: column;
+    align-items: center;
+    height: 5.5rem;
+    padding: 1rem 0;
+  }
+ul {
+    width: 80vw;
+    /* background: green; */
+    justify-content: center;
+  }
+  .warning {
+    display: none;
 }
-@keyframes bottom-to-top {
-    0% {
-        transform: translateY(-50%);
-        opacity: 0;
+}
+@media (orientation: portrait) {
+    main {
+        justify-content: start;
+        background: transparent;
     }
-    50% {
-        opacity: 1;
+    main *:not(.warning) {
+        display: none;
     }
-    100% {
-        transform: translateY(-80%);
-        opacity: 0;
+    .warning {
+        margin-top: 4rem;
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
     }
 }
