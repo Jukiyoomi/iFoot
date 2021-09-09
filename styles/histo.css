@@ -1,0 +1,23 @@
+@import url(./default.css);
+
+.tab-container {
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 1rem; */
+}
+header{
+    position: fixed;
+}
+h1{
+    margin-bottom: .5rem;
+}
+.tab-container * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: green; */
+    padding: .5rem;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}

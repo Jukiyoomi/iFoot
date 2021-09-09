@@ -1,0 +1,10 @@
+@import url(./default.css);
+main {
+    padding: 2rem;
+}
+h1 {
+    color: #026288;
+}
+p {
+    margin-bottom: 2.5rem;
+}

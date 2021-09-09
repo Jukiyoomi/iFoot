@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/histo.css">
+    <title>iFoot</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/Group 1.png" alt="">
+            <a href="../accueil.html"><span>Baby-Foot</span></a>
+        </div>
+        <ul>
+            <li><a href="./setgame.html">Jouer une partie</a></li>
+            <li><a href="./rules.html">Règles du jeu</a></li>
+            <li class="active"><a href="">Historique</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>Historique</h1>
+        <div class="tab-container">
+            <p>Date</p>
+            <p>Score</p>
+        </div>
+    </main>
+</body>
+<script>
+    let f = 0
+    let tt = localStorage.getItem(`match${f+1}`)
+    let dd = localStorage.getItem(`day${f+1}`)
+    let cont = document.querySelector('.tab-container')
+    console.log(tt)
+    cont.innerHTML += `<p>${dd}</p>
+                        <p>${tt}</p>`
+</script>
+
+</html>
